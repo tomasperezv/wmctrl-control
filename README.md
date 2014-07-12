@@ -35,3 +35,5 @@ wmctrl -r "test-name" -t 4
 
 ### Reference
 http://superuser.com/questions/297819/move-window-to-another-monitor-in-ubuntu-using-keyboard
+
+http://movingtofreedom.org/2010/08/10/arranging-windows-from-the-gnulinux-command-line-with-wmctrl/
