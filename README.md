@@ -7,6 +7,12 @@ Wrapper on top of wmctrl for modifying dynamically the display layout of applica
 
 Move all the Firefox windows to the 3rd desktop
 
+### Dependencies
+
+```
+sudo apt-get install wmctrl
+```
+
 ```
 sh move-all-by-name.sh "Firefox" 2
 ```
