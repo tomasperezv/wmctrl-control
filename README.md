@@ -3,6 +3,14 @@ wmctrl-control
 
 Wrapper on top of wmctrl for modifying dynamically the display layout of application windows.
 
+### Usage
+
+Move all the Firefox windows to the 3rd desktop
+
+```
+sh move-all-by-name.sh "Firefox" 2
+```
+
 ### Command line parameters for wmctrl
 
 Go to the first desktop
