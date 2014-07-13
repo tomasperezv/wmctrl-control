@@ -1,0 +1,23 @@
+#!/bin/bash
+# Usage
+# ./wmctrl-control config-file
+# config-file will be placed under the config folder
+if [ ! -f ./config/$1 ]; then
+  echo "Configuration file not found"
+  exit
+fi
+
+echo "Reading configuration from "$1
+
+cat ./config/$1 | awk '
+BEGIN {}
+{
+  # The desktop parameter expects to reference the first desktop
+  # desktop #1, but internally it is identified as #0, therefore
+  # we need to increment its value.
+  desktop=$2-1
+  print "sh ./scripts/move-all-by-name.sh " $1 " " desktop
+  system("sh ./scripts/move-all-by-name.sh " $1 " " desktop)
+}
+END {}
+'
