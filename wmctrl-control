@@ -2,14 +2,14 @@
 # Usage
 # ./wmctrl-control config-file
 # config-file will be placed under the config folder
-if [ ! -f ./config/$1 ]; then
+if [ ! -f ./config/$1.conf ]; then
   echo "Configuration file not found"
   exit
 fi
 
 echo "Reading configuration from "$1
 
-cat ./config/$1 | awk '
+cat ./config/$1.conf | awk '
 BEGIN {}
 {
   # The desktop parameter expects to reference the first desktop
